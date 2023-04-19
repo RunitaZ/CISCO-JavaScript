@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let color= prompt('Ingrese el nombre de un color')
+        document.body.style.background=color;
+        let horaActual=new Date().getHours()
+        if(horaActual<12){
+            console.log('Buenas dia')
+        } else if(horaActual >12){
+            console.log('Buenas tardes');
+        } else {console.log('Buenas noches')}
+        const saludos=['Buenos dias','Buenas tardes','Buenas noches']
+        /*determinar el index de mi array de saludos*/
+        let index=horaActual>=12 && horaActual<18 ? 1:horaActual >=18 ? 2:0
+        console.log(saludos[index]);
+    </script>
+</body>
+</html>

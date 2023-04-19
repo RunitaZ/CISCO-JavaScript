@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.time('Timer1')
+        let items = []
+        for(let i=0; i <100000; i++){
+            items.push(i)
+        }
+        console.timeEnd('Timer 1')
+        let animales = [
+            {animal: 'Caballo', name:'Henry', age:43},
+            {animal: 'Perro', name:'Alan', age:13},
+            {animal: 'Gato', name:'Pelusa', age:5}
+        ]
+        console.table(animales)
+        console.log(animales);
+        let name = 'Maria'
+        console.log('name', name);
+        console.log({name});
+        const pais1={nombre: 'Bolivia', ciudad:'La Paz', id:'123'}
+        const pais2={nombre: 'Argentina', ciudad:'Buenos Aires', id:'1234'}
+
+        console.log(pais1);
+        console.log(pais2);
+        console.log({pais1, pais2});
+
+
+
+        console.group('Detalles de usuario maria')
+        console.log('name: Maria')
+        console.log('Pais: Bolivia');
+        console.group('Detalles de usuario Paola')
+        console.log('name: Paola')
+        console.log('Pais: Argentina');
+        console.groupEnd()
+
+
+        //convertir de Celcius a farenheit
+        const c = prompt('Ingresa Grados Celcius')
+        f=((c*9)/5+32).toFixed(4)
+        console.log(f)
+
+    </script>
+</body>
+</html>

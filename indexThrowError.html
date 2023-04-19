@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    throw 'error2'
+
+const throwError =()=>{
+let message
+let x = prompt('Introduce un número: ')
+try{
+    if(x=='') throw 'vacío'
+    if(isNaN(x)) throw 'no es un número'
+    x= Number(x)
+    if(x<5) throw 'es muy pequeño el número'
+    if(x>10) throw 'es muy grande el número'
+}
+catch(error){
+    console.log(error);
+}
+}
+throwError();
+</script>
+</html>
