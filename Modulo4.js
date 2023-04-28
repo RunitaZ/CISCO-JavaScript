@@ -218,17 +218,26 @@ let contactos = [
 ]
 
 
-let nuevoContacto = 
-    {
-    nombre : prompt("Ingrese un nuevo nombre", 'ingrese dato'),
-    telefono : prompt("ingrese un nuevo teléfono",0),
-    correoElectronico : prompt("Ingrese un nuevo Correo Electronico", 'ingrese dato')
+
+
+
+
+
+while(true){
+    let nuevoContacto = 
+        {
+        nombre : prompt("Ingrese un nuevo nombre", 'ingrese dato'),
+        telefono : prompt("ingrese un nuevo teléfono",0),
+        correoElectronico : prompt("Ingrese un nuevo Correo Electronico", 'ingrese dato')
+        }
+        
+    contactos.push(nuevoContacto);
+    
+    if(nuevoContacto.nombre===" " && nuevoContacto.telefono===" " && nuevoContacto.correoElectronico===" ")
+        {
+            break;
     }
-
-contactos.push(nuevoContacto);
-
-
-switch 
+}
 
 
 let last = contactos.length-1
@@ -261,16 +270,16 @@ while (true) {
 
     if (!Number.isNaN(primerNumero) && !Number.isNaN(segundoNumero)) {
         switch (operando) {
-            case "+":
+            case "primer contacto":
                 result = primerNumero + segundoNumero;
                 break;
-            case "-":
+            case "ultimo contacto":
                 result = primerNumero - segundoNumero;
                 break;
-            case "*":
+            case "todos los contactos":
                 result = primerNumero * segundoNumero;
                 break;
-            case "/":
+            case "salir":
                 result = primerNumero / segundoNumero;
                 break;
             default:

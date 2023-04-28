@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- En CSS los ID son las huellas dactilares unicas para cada etiqueta-->
+    <h1>TITULO PRIMERO PRUEBA normal</h1> 
+    <!-- En CSS, CLASS es una propiedad para una etiqueta(<h1>, <p>, <h2>, <button>)-->
+    <h1 class="titulo">Título con propiedad "titulo"</h1>
+    <h1>Encabezado</h1>
+    <h1>Otra prueba sin propiedad</h1>
+
+    <h2 id="subtitulo">Subtítulo con id "subtitulo"</h2>
+    
+    <!-- EJEMPLOS DE ETIQUETAS
+        <button></button>
+    <p></p>
+    <script></script>
+    <h2></h2>
+-->
+    <script>
+        // el método "getElementsByTagName" me permite ingresar la etiqueta que voy a trabajar con el elemento
+        //*aquí se obtiene datos del <h1> a través de su nombre de etiqueta(h1)   Títulos
+        const allTitles =  document.getElementsByTagName('h1')
+        console.log(allTitles); //lista
+        console.log(allTitles.length);
+
+        //*aquí se obtiene datos del <h2> a través de su Id    subtítulos
+        const subtitulo = document.getElementById('subtitulo')
+        console.log(subtitulo)
+
+        //*aquí se obtiene datos del <h1> a través de su Class    Títulos
+        const tituloh1 = document.getElementsByClassName('titulo')
+        console.log(tituloh1)
+
+        // querySelector para buscar una etiqueta, ya sea por el nombre de etiqueta, Id, o Class
+        let primerVariable = document.querySelector('h1')
+        let segundaVariable = document.querySelector('#subtitulo')
+        let terceraVariable = document.querySelector('.titulo')
+
+        console.log(primerVariable)
+        console.log(segundaVariable);
+        console.log(terceraVariable);
+
+        //querySelectorAll = Para mostrar todos los elementos cuyas etiquetas sean <h1>
+            let VariableH1 = document.querySelectorAll('h1')
+        console.log('colección de etiquetas h1')
+        //para mostrar todos los elementos y etiquetas parecidos con <h1> hacemos un FOR
+            for (let i = 0; i < VariableH1.length; i++) {
+                console.log(VariableH1[i]);
+            }
+
+        //agregando una etiqueta h1 desde javaScript
+        let titulos = document.querySelectorAll('h1')
+        titulos[4].className ='titu' //
+        titulos[4].id = 'cuartoElemento'
+        titulos[4].textContent = 'cuarto título'
+
+
+        //
+        let titulosAttribute = document.querySelectorAll('h1')
+        titulosAttribute[5].setAttribute('class', 'tituloprueba2')
+        titulosAttribute[5].setAttribute('id', 'quintoElemento')
+
+
+        //
+        let tituloClase = document.querySelectorAll('h1')
+        tituloClase[6].classList.add('clase1', 'clase2')
+        tituloClase[6].textContent = 'sexto título'
+
+        //el textContent, se limita a mostrar solo texto que tenga agregado y el innerHTML no son iguales, puede trabajar con enviar muchos textos y trabajar con más etiquetas a la vez
+    </script>
+</body>
+</html>
