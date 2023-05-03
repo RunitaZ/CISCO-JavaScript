@@ -11,7 +11,11 @@
     <!--CREANDO UN FORMULARIO DE FORMA MANUAL EN EL BODY
 
     <form action="" method="post">
-        <input type="number" name="" id="" required>
+        
+        <label id="">Ingrese el nombre</label>
+
+        <input type="number" name="" id="" required placeholder="ingrese nombre">
+
         <input type="date" name="" id="">
         <input type="text" name="" id="" required>
         <input type="email" name="" id="" required>
@@ -19,11 +23,36 @@
         
     </form>
     -->
-    
+
     <button onclick="crearFormulario()">Crear Formulario</button>
     <script>
         function crearFormulario(){
+            let formulario=document.createElement("form")
+            formulario.setAttribute("method", "post")
+            formulario.setAttribute("action", "")
 
+            //campo texto para el nombre
+            let campoTexto = document.createElement("input")
+            campoTexto.setAttribute("type","text")
+            campoTexto.setAttribute("placeholder", "Nombre Completo")
+
+            //campo texto para el email
+            let campoEmail = document.createElement("input")
+            campoTexto.setAttribute("type","text")
+            campoTexto.setAttribute("placeholder", "Correo Electronico")
+
+            //campo para botón enviar
+            let botonEnviar = document.createElement("input")
+            botonEnviar.setAttribute("type","submit")
+            botonEnviar.setAttribute("value", "Enviar")
+
+            //este elemento permite enviar o agregar los datos al formulario 
+            formulario.appendChild(campoTexto)
+            formulario.appendChild(campoEmail)
+            formulario.appendChild(botonEnviar)
+
+            //agrego el formulario al cuerpo(body) del documento
+            document.body.appendChild(formulario)
         }
     </script>
 </body>
