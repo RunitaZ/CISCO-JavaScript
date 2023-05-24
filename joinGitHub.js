@@ -28,7 +28,7 @@
 
 //*     para GitHub la rama principal es Master, para Git es Main.
 //?     git push -u origin main         
-//?     git remote -v       muestra con qué repositorios está vinculado
+//?     git remote -v               muestra con qué repositorios está vinculado
 //?     si al iniciar Git Bash en una ruta específica, si tiene la palabra MASTER al final, quiere decir que ya está trabajando dentro del Git
 
 //?     git commit -m "add files object and POO"    para verificar datos de nuestros archivos
@@ -45,7 +45,8 @@
 //?     git pull                        comando para descargar los ultimos cambios de la rama al repositorio local. y Actualizar posibles cambios de otro repositorio clonado.
 //?     git clone                       comando para clonar archivos de otros repositorios
 //?     git push                        comando para cargar los últimos cambios, luego agregar un commit "algun comentario", y luego actualizamos con git add .
-
+//?     git checkout -b inserta nombre rama   comando para cambiar de rama, ya sea al MASTER o a alguna rama creada
+//?     git checkout -                  comando para retornar a la anterior rama en la que nos encontrábamos
 console.log("Hola Mundo")
 
 console.log("HOla como estas");

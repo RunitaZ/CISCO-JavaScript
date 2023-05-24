@@ -115,3 +115,39 @@ async function verPaises(){
     console.log(data);
 }
 verPaises();
+
+
+
+
+const fetchData = async ()=>{
+    try {
+        const respuesta = await fetch ('https://restcountries.com/v3.1/all')
+        const respuestaJason = await respuesta.json()
+        console.log(respuestaJason);
+        
+    }
+}
+fetchData()
+
+const url ='https://rickandmortyapi.com/api/character'
+const getCharacterNames = () =>{
+    return new Promise((resolve, reject)=>{
+        fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(data =>{
+            const names = data.results.map(Character => Character.name)
+            resolve(names)
+        })
+        .catch(error => reject(error))
+    })
+}
+getCharacterNames()
+.then(names => console.log(names))
+.catch(error => console.log(error))
+
+
+async function mifuncion(){
+    await new Promise(resolve => setTimeout(resolve,2000))
+    console.log('la espera de 2 segundo ha terminado');
+}
+mifuncion()

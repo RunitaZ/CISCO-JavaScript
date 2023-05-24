@@ -101,7 +101,7 @@ console.log(sub(12,10));
 
 //* Función de flecha para la multiplicación con verificación de números enteros
 let mult = (a,b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a*b;
-console.log(mult(10,10.1));
+console.log(mult(10,12));
 
 
 //! TAREA 4
@@ -116,6 +116,20 @@ console.log(action(sub, 12, 10)); // -> 2
 console.log(action(mult, 10, 10.1)); // -> NaN
  */
 
+let action = (callback, a, b) => callback(a,b);
+console.log(action(add, 10, 10.1));
+
+// OR
+action = function(callback, a, b){
+    return callback(a,b)
+}
+console.log(action(sub, 12, 10));
+
+// OR
+action = function action(callback,a,b){
+    return callback(a,b);
+}
+console.log(action(mult, 12, 10));
 
 
 //! TAREA 5

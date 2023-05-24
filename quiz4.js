@@ -145,7 +145,7 @@ d)  if ... else ...
 
 /*
 a)  do ...  while
-b)  switch   //respuesta correcta
+b)  switch   //*respuesta correcta
 c)  for
 d)  while
  */
@@ -153,13 +153,13 @@ d)  while
 
 //! 12.
 
-//? cuál de las siguientes instruccines de bucles verifica la condición de 
+//? cuál de las siguientes instrucciones de bucles verifica la condición de 
 //? continuación del bucle hasta después de que la iteración haya sigo completada?
 
 /*
 a)  for... in
 b)  for
-c)  do ...  while  //respuesta correcta
+c)  do ...  while  //*respuesta correcta
 d)  while
  */
 
